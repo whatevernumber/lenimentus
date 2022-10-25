@@ -12,7 +12,7 @@ const rotate_hue_360 = (element) =>
                 `hue-rotate(${randomize(-360, 360)}deg)`,
             1500);
 rotate_hue_360(nav);
-rotate_hue_360(leni_back);
+// rotate_hue_360(leni_back);
 
 /* Book Animation */
 
@@ -52,28 +52,27 @@ document.addEventListener('mousemove', autoplay);
 const nav_buttons = document.querySelectorAll('.nav-item');
 const book_info = book;
 const author_info = document.querySelector('.author-info');
-nav_buttons.forEach((button) => {
-    const toggle_blocks = (evt) => {
-        if (evt.target.classList.contains('about-book') && !author_info.classList.contains('hidden')) {
-            if (cover.style.visibility !== 'visible') {
-                cover.style.visibility = 'visible';
-                book_info.classList.remove('book-animate');
-            }
-            author_info.classList.add('hidden');
-            book_info.classList.remove('hidden');
-        } else if (evt.target.classList.contains('about-author') && !book_info.classList.contains('hidden')) {
-            if (image.style.display !== 'none') {
-                image.style.display = 'none';
-            }
-            book_info.classList.add('hidden');
-            author_info.classList.remove('hidden');
-        }
-    }
 
+const toggle_blocks = (evt) => {
+    if (evt.target.classList.contains('about-book') && !author_info.classList.contains('hidden')) {
+        if (cover.style.visibility !== 'visible') {
+            cover.style.visibility = 'visible';
+        }
+        author_info.classList.add('hidden');
+        book_info.classList.remove('hidden');
+    } else if (evt.target.classList.contains('about-author') && !book_info.classList.contains('hidden')) {
+        if (image.style.display !== 'none') { // in case the animation hasn't finished yet, and we pressed a button
+            image.style.display = 'none';
+            book_info.classList.remove('book-animate');
+        }
+        book_info.classList.add('hidden');
+        author_info.classList.remove('hidden');
+    }
+}
+
+nav_buttons.forEach((button) => {
     button.addEventListener('click', toggle_blocks);
 })
-
-/* Debugging */
 
 /* Attempts at On-Scroll Animation */
 // image.style.animationPlayState = 'paused';
@@ -88,9 +87,11 @@ nav_buttons.forEach((button) => {
 //         // console.log(scroll_start);
 //         image.style.animationPlayState = 'running';
 //         book.style.animationPlayState = 'running';
+//         image.style.animationDirection = 'normal';
+//         book.style.animationDirection = 'normal';
 //     } else {
 //         console.log(scroll_start);
-//         image.style.animationPlayState = 'paused';
-//         book.style.animationPlayState = 'paused';
+//         image.style.animationDirection = 'reverse';
+//         book.style.animationDirection = 'reverse';
 //     }
 // })

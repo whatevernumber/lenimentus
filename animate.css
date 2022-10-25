@@ -1,7 +1,6 @@
 .book-animate {
     animation-name: fade-in;
     animation-duration: 4s;
-    /*animation-timing-function: cubic-bezier(.56, .52, .83, .98);*/
     animation-play-state: paused;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -37,5 +36,42 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+/*///////////////////////////////////////////*/
+
+.leni-h1 {
+    animation: glitch 20s 12s infinite;
+}
+
+.leni-button {
+    animation: glitch 2.5s 7s infinite, glitch-2 2s 6.5s infinite;
+}
+
+@keyframes glitch {
+    1%{
+        transform: rotateX(10deg) skewX(90deg);
+    }
+    2%{
+        transform: rotateX(0deg) skewX(0deg);
+    }
+}
+
+@keyframes fudge {
+    from {
+        transform: translate(0px, 0px);
+    }
+    to {
+        transform: translate(0px, 2%);
+    }
+}
+
+@keyframes glitch-2 {
+    1%{
+        transform: rotateX(10deg) skewX(70deg);
+    }
+    2%{
+        transform: rotateX(0deg) skewX(0deg);
     }
 }
