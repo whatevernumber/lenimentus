@@ -5,6 +5,21 @@
 
 body {
     background: var(--leni-gradient);
+    /* Hide scrollbar in IE and Edge */
+    -ms-overflow-style: none;
+    /*Customize scrollbar in Firefox */
+    scrollbar-width: 5px;
+    scrollbar-color: rgb(10 88 239 / 25%) rgb(41 114 97 / 15%);
+}
+
+/* Customizing Scrollbar in Webkit (Chrome) */
+::-webkit-scrollbar {
+    background: rgb(41 114 97 / 15%);
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(10 88 239 / 25%);
 }
 
 section.hidden {
@@ -56,7 +71,6 @@ section.hidden {
 .leni-nav {
     align-self: center;
     width: 100%;
-    margin-top: -3%;
     /*background: var(--leni-gradient);*/
     background: url("res/leni-back.png");
     background-size: contain;
@@ -101,12 +115,12 @@ section.hidden {
 }
 
 .nav-item:hover {
-    color: transparent;
+    color: ghostwhite;
     text-shadow:    -1px -1px rgb(0 139 139 / 25%),
                     0 0 ghostwhite,
                     4px 4px darkcyan,
                     8px 8px 1px rgb(241 14 97 / 45%);
-    background: url("res/line-3.png");
+    background: url("res/de-line-3.png");
     opacity: 0.7;
     outline: 1px solid #28333F;
     transition-duration: 0.35s;
@@ -118,11 +132,11 @@ section.hidden {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    row-gap: 5.5%;
+    row-gap: 2.5%;
     height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
-    background-image: url("res/webb4.png");
+    background-image: url("res/shadows.png");
     background-color: rgba(67, 82, 134, 0.42);
 }
 
@@ -146,6 +160,7 @@ section.hidden {
 .leni-footer {
     width: 100%;
     margin-bottom: 2%;
+    margin-top: 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -168,7 +183,9 @@ section.hidden {
     text-decoration: none;
 }
 
-.leni-link:hover {
+.leni-link:hover,
+.leni-copyrights:hover,
+.leni-h2:hover {
     opacity: 0.8;
     text-shadow: 4px 4px 30px seashell,
     0 0 2px cadetblue,
@@ -220,6 +237,10 @@ section.hidden {
     cursor: default;
 }
 
+.leni-h1 {
+    animation: glitch 20s 12s infinite;
+}
+
 .leni-button {
     padding: 15px;
     text-decoration: none;
@@ -235,7 +256,8 @@ section.hidden {
     4px -4px 4px tomato,
     -4px 4px 4px cadetblue;
     border: teal 1px solid;
-    background: rgba(67, 82, 134, 0.42) url("res/line.png") repeat;
+    background: rgba(67, 82, 134, 0.42) url("res/de-line.png") repeat;
+    animation: glitch 2.5s 7s infinite, glitch-2 2s 6.5s infinite;
     transition-duration: 1s;
 }
 .leni-button:hover {
@@ -262,7 +284,7 @@ section.hidden {
 
 /* Animations */
 
-.book-animate {
+.book-animated {
     animation-name: fade-in;
     animation-duration: 4s;
     animation-play-state: paused;
@@ -304,14 +326,6 @@ section.hidden {
 }
 
 /* Glitch Effect */
-
-.leni-h1 {
-    animation: glitch 20s 12s infinite;
-}
-
-.leni-button {
-    animation: glitch 2.5s 7s infinite, glitch-2 2s 6.5s infinite;
-}
 
 @keyframes glitch {
     1%{
