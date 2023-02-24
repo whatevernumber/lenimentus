@@ -175,7 +175,7 @@ section.hidden {
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
-    background-image: url("res/shadows.png");
+    background-image: url("res/shadows.jpg");
     background-color: rgba(67, 82, 134, 0.42);
 }
 
@@ -190,7 +190,7 @@ section.hidden {
         height: 100%;
         width: 100%;
         background-repeat: no-repeat;
-        background-image: url("res/shadows.png");
+        background-image: url("res/shadows.jpg");
         background-color: rgba(67, 82, 134, 0.42);
     }
 }
