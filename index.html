@@ -51,19 +51,25 @@
                     утративших самих себя людей право на то, чтобы вновь встать во главе мироздания, или их участь
                     предрешена неумолимым Усовершенствованием?
                 </p>
-                <img class="leni-cover" width="395" src="res/book-3d.png" alt="LENIMENTUS">
+
+                <div class="book-cover">
+                    <img class="leni-cover" width="395" src="res/book-3d.png" alt="LENIMENTUS">
+                </div>
                 <a class="leni-button" href="https://www.litres.ru/el-farber/lenimentus/">ЧИТАТЬ</a>
             </section>
-            <section class="leni-footer">
-                <a class="leni-link" href="mailto: lenimentus@protonmail.com">Связаться со мной</a>
-                <h2 class="leni-h2">LENIMENTUS</h2>
-                <p class="leni-copyrights">2023©</p>
+
+            <section class="image-block">
+                <img class="leni-book-3d" src="res/book-3d.png" width="464" alt="Обложка книги Lenimentus">
             </section>
-           
+
+            <footer class="leni-footer">
+                <div class="contacts-footer">
+                    <a class="leni-link" href="mailto: lenimentus@protonmail.com">Связаться со мной</a>
+                    <p class="leni-copyrights">2023©</p>
+                </div>
+                <h2 class="leni-h2">LENIMENTUS</h2>
+            </footer>
         </main>
-        <section class="image-block">
-            <img class="leni-book-3d" src="res/book-3d.png" width="464" alt="Обложка книги Lenimentus">
-        </section>
     <script>
         const randomize = (start, end, dotIndex = 0) => {
 
@@ -99,7 +105,7 @@
         const hideOnAnimationEnd = () => {
             image.style.display = 'none';
             cover.style.visibility = 'visible';
-            book.classList.remove('book-animate');
+            book.classList.remove('book-animated');
             image.removeEventListener('animationend', hideOnAnimationEnd);
             document.removeEventListener('mousemove', autoplay);
         }
@@ -139,7 +145,7 @@
             } else if (evt.target.classList.contains('about-author') && !book_info.classList.contains('hidden')) {
                 if (image.style.display !== 'none') { // in case the animation hasn't finished yet, and we pressed a button
                     image.style.display = 'none';
-                    book_info.classList.remove('book-animate');
+                    book_info.classList.remove('book-animated');
                 }
                 book_info.classList.add('hidden');
                 author_info.classList.remove('hidden');

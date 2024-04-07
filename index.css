@@ -6,6 +6,7 @@
 }
 
 body {
+    height: calc(100vh);
     background: var(--leni-gradient);
     /* Hide scrollbar in IE and Edge */
     -ms-overflow-style: none;
@@ -46,43 +47,9 @@ section.hidden {
 }
 
 .leni-h2 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: 14px;
-    bottom: 2%;
+    width: 100%;
     letter-spacing: 14px;
-}
-
-@media (min-width: 1200px) {
-    .leni-h1 {
-        margin: 0;
-        font-family: "Montserrat", sans-serif;
-        font-size: 52px;
-        line-height: 0.9;
-        text-transform: uppercase;
-        text-align: center;
-        font-weight: 400;
-        color: rgba(0, 0, 0, 0.27);
-        text-shadow: 4px 4px 4px rgba(241, 14, 37, 0.25);
-        cursor: default;
-    }
-
-    .leni-h2 {
-        position: static;
-        margin: 0;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 100;
-        font-size: 32px;
-        letter-spacing: 88px;
-        justify-self: center;
-        color: transparent;
-        text-shadow: 4px 4px 30px seashell,
-        -2px -2px 2px cadetblue,
-        4px -4px 4px tomato,
-        -4px 4px 4px cadetblue;
-        cursor: default;
-    }
+    margin-top: 25px;
 }
 
 .leni-header {
@@ -109,12 +76,6 @@ section.hidden {
     transition-duration: 1s;
 }
 
-@media (min-width: 1200px) {
-    .leni-nav {
-        padding-top: 12px;
-    }
-}
-
 .leni-nav:hover {
     opacity: 0.7;
     transition-property: filter;
@@ -130,12 +91,6 @@ section.hidden {
     flex-direction: row;
     justify-content: space-around;
     column-gap: 42px;
-}
-
-@media (min-width: 1200px) {
-    .nav-list {
-        margin: 0;
-    }
 }
 
 .nav-item {
@@ -172,91 +127,35 @@ section.hidden {
 .maintus {
     position: relative;
     text-align: justify;
-    height: 100%;
     width: 100%;
+    padding-bottom: 20px;
     background-repeat: no-repeat;
     background-image: url("res/shadows.jpg");
     background-color: rgba(67, 82, 134, 0.42);
-}
-
-@media (min-width: 1200px) {
-    .maintus {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        row-gap: 2.5%;
-        height: 100%;
-        width: 100%;
-        background-repeat: no-repeat;
-        background-image: url("res/shadows.jpg");
-        background-color: rgba(67, 82, 134, 0.42);
-    }
 }
 
 .grid {
     display: block;
 }
 
-@media (min-width: 1200px) {
-    /* Book's block */
-    .grid {
-        display: grid;
-        max-width: 80%;
-        margin: 0 auto;
-        align-self: center;
-        justify-self: center;
-        grid-template-rows: 1fr;
-        grid-template-columns: 2fr 1fr;
-        justify-content: center;
-        justify-items: center;
-        row-gap: 15px;
-    }
-}
-
 .image-block {
-    width: 320px;
+    width: 100%;
     position: absolute;
-    bottom: 0;
-    top: 25%;
-}
-
-@media (min-width: 1200px) {
-    .image-block {
-        height: fit-content;
-        width: fit-content;
-        margin: auto 0;
-        opacity: 0.9;
-        position: absolute;
-        bottom: 0;
-        left: 40%;
-        right: 0;
-        z-index: 2;
-    }
+    top: 15%;
+    left: 10%;
 }
 
 .leni-book-3d {
-    width: inherit;
-}
-
-@media (min-width: 1200px) {
-    .leni-book-3d {
-        padding: 0;
-        margin: 0;
-        width: 464px;
-        cursor: pointer;
-    }
+    width: 320px;
 }
 
 .book {
     padding: 0 35px;
 }
 
-@media (min-width: 1200px) {
-    .book {
-        padding: 15px 35px;
-    }
+.book-cover {
+    display: flex;
+    margin: 0 auto;
 }
 
 .leni-cover {
@@ -264,14 +163,6 @@ section.hidden {
     visibility: hidden;
     margin: 0 auto;
     max-width: 100%;
-}
-
-@media (min-width: 1200px) {
-    .leni-cover {
-        visibility: hidden;
-        grid-column: 2 / -1;
-        align-self: center;
-    }
 }
 
 .leni-description {
@@ -288,27 +179,6 @@ section.hidden {
     -2px -2px 2px forestgreen,
     -2px 2px 2px orangered,
     -4px 2px 2px hotpink;
-}
-
-@media (min-width: 1200px) {
-    .leni-description {
-        grid-row: 1 / -1;
-        margin: 0;
-        max-width: 70%;
-        align-self: center;
-        justify-self: center;
-        font-family: "Montserrat", sans-serif;
-        font-size: 20px;
-        letter-spacing: 0.05em;
-        font-style: italic;
-        color: #85f6fb;
-        opacity: 0.7;
-        text-shadow: 2px 2px cadetblue,
-        -2px -2px 2px forestgreen,
-        -2px 2px 2px orangered,
-        -4px 2px 2px hotpink;
-        cursor: default;
-    }
 }
 
 .leni-button {
@@ -331,14 +201,6 @@ section.hidden {
     transition-duration: 1s;
 }
 
-@media (min-width: 1200px) {
-    .leni-button {
-        letter-spacing: 18px;
-        width: 50%;
-        grid-column: 1 / -1;
-    }
-}
-
 .leni-button:hover {
     filter: hue-rotate(-360deg);
     background: #28333F;
@@ -354,12 +216,6 @@ section.hidden {
     padding: 15px 35px;
 }
 
-@media (min-width: 1200px) {
-    .author-info {
-        display: grid;
-    }
-}
-
 .author-photo {
     width: 75%;
     margin: 0 auto;
@@ -369,35 +225,18 @@ section.hidden {
     object-fit: cover;
 }
 
-@media (min-width: 1200px) {
-    .author-photo {
-        order: 1;
-        width: 400px;
-        height: 400px;
-        align-self: center;
-    }
-}
-
 /* Footer */
 
 .leni-footer {
      width: 100%;
-     margin: 0;
-     padding-bottom: 20%;
-     display: flex;
-     justify-content: space-between;
-     align-items: end;
+     margin-top: auto;
+     position: relative;
  }
 
-@media (min-width: 1200px) {
-    .leni-footer {
-        width: 100%;
-        margin: 5% 0 20px;
-        padding: 1% 0;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
+.contacts-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .leni-link {
@@ -416,24 +255,6 @@ section.hidden {
     color: white;
 }
 
-@media (min-width: 1200px) {
-    .leni-link {
-        margin: 0;
-        opacity: 0.3;
-        color: white;
-        font-style: italic;
-        text-decoration: none;
-    }
-
-    .leni-copyrights {
-        margin: 0;
-        font-size: 12px;
-        font-style: italic;
-        color: white;
-        opacity: 0.2;
-    }
-}
-
 .leni-link:hover,
 .leni-copyrights:hover,
 .leni-h2:hover {
@@ -442,6 +263,173 @@ section.hidden {
     0 0 2px cadetblue,
     4px -4px 4px tomato,
     -4px 4px 4px cadetblue;
+}
+
+@media (min-width: 1001px) {
+    .leni-h1 {
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        font-size: 52px;
+        line-height: 0.9;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.27);
+        text-shadow: 4px 4px 4px rgba(241, 14, 37, 0.25);
+        cursor: default;
+    }
+
+    .leni-h2 {
+        position: static;
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 100;
+        font-size: 32px;
+        letter-spacing: 88px;
+        justify-self: center;
+        color: transparent;
+        text-shadow: 4px 4px 30px seashell,
+        -2px -2px 2px cadetblue,
+        4px -4px 4px tomato,
+        -4px 4px 4px cadetblue;
+        cursor: default;
+    }
+
+    .nav-list {
+        margin: 0;
+    }
+
+    .maintus {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 2.5%;
+        width: 100%;
+        height: calc(100vh);
+        background-repeat: no-repeat;
+        background-image: url("res/shadows.jpg");
+        background-color: rgba(67, 82, 134, 0.42);
+    }
+
+    /* Book's block */
+    .grid {
+        display: grid;
+        max-width: 80%;
+        margin: 0 auto;
+        align-self: center;
+        justify-self: center;
+        grid-template-rows: 1fr;
+        grid-template-columns: 2fr 1fr;
+        justify-content: center;
+        justify-items: center;
+        row-gap: 15px;
+    }
+
+    .image-block {
+        height: fit-content;
+        width: fit-content;
+        opacity: 0.9;
+        position: absolute;
+        left: auto;
+        /*right: 10%;*/
+        /*top: 150px;*/
+        z-index: 2;
+    }
+
+    .leni-book-3d {
+        width: 464px;
+        cursor: pointer;
+    }
+
+    .book {
+        padding: 15px 35px;
+    }
+
+    .leni-cover {
+        visibility: hidden;
+        grid-column: 2 / -1;
+        align-self: center;
+    }
+
+    .leni-description {
+        grid-row: 1 / -1;
+        margin: 0;
+        max-width: 70%;
+        align-self: center;
+        justify-self: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+        letter-spacing: 0.05em;
+        font-style: italic;
+        color: #85f6fb;
+        opacity: 0.7;
+        text-shadow: 2px 2px cadetblue,
+        -2px -2px 2px forestgreen,
+        -2px 2px 2px orangered,
+        -4px 2px 2px hotpink;
+        cursor: default;
+    }
+
+    .leni-button {
+        letter-spacing: 18px;
+        width: 50%;
+        grid-column: 1 / -1;
+    }
+
+    .author-info {
+        display: grid;
+    }
+
+    .author-photo {
+        order: 1;
+        width: 400px;
+        height: 400px;
+        align-self: center;
+    }
+
+    .leni-footer {
+        width: 100%;
+        margin: 5% 0 20px;
+        padding: 1% 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .leni-link {
+        opacity: 0.3;
+        color: white;
+        font-style: italic;
+        text-decoration: none;
+    }
+
+    .leni-copyrights {
+        margin-right: 5%;
+        font-size: 12px;
+        font-style: italic;
+        color: white;
+        opacity: 0.2;
+    }
+}
+
+@media (min-width: 1001px) and (max-width: 1200px) {
+    .leni-h2 {
+        letter-spacing: 20px;
+    }
+
+    .author-info {
+        display: flex;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1001px) {
+
+    .image-block {
+        left: 28%;
+    }
 }
 
 /* Animations */
