@@ -197,8 +197,9 @@ section.hidden {
     -4px 4px 4px cadetblue;
     border: teal 1px solid;
     background: rgba(67, 82, 134, 0.42) url("res/de-line.png") repeat;
-    animation: glitch 2.5s 7s infinite, glitch-2 2s 6.5s infinite;
-    transition-duration: 1s;
+    animation: glitch 2.5s 7s infinite;
+    /*animation: glitch-2 2s 6.5s infinite;*/
+    /*transition-duration: 1s;*/
 }
 
 .leni-button:hover {
